@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: rgb(54, 52, 52);
+            color: rgb(174, 174, 250);
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>aprendendo a usar <strong>DOM</strong> em JavaScript</p>
+    <div id='msg'>clique em mim</div>
+
+    <script>
+        var p1 = window.document.getElementsByTagName("p")[0] // variável recebe um elemento por tag name
+        p1.innerText = "ahha" // modificando o texto da tag
+        // p1.style.color = 'blue'
+        var d = window.document.querySelector('div#msg')
+        d.style.background = 'gray'
+
+    </script>
+</body>
+</html>

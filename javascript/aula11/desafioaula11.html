@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Exercicio 09 em site</h1>
+    <p><input type="text" id="texto"> <input type="button" value="verificar" id="botao"></p>
+    <div id="resultado"></div>
+    <script>
+        var botao = window.document.querySelector("input#botao")
+        var texto = window.document.querySelector("input#texto")
+        botao.addEventListener("click", verificar)
+
+        var resultado = window.document.querySelector('div#resultado')
+
+        function verificar() {
+
+            if (texto.value.toUpperCase() != 'BRASIL') {
+
+                resultado.innerHTML = "<p>Estrangeiro</p>"
+                resultado.innerHTML += `<p>Vivendo em <strong>${texto.value}</strong></p>`
+
+            } else {
+
+                resultado.innerHTML = "<p><strong>Brasileiro</strong></p>"
+            }
+
+        }
+    </script>
+</body>
+</html>
